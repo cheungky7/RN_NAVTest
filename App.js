@@ -60,7 +60,7 @@ const RootStack= createStackNavigator(
       },
       {
         initialRouteName: 'Home',
-        headerMode: 'float',
+        headerMode: 'none',
       }
 );
 
