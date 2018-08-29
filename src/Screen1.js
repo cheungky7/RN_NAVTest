@@ -22,6 +22,20 @@ const locale=[
 ];
 
 export default class Screen1 extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      Userlocale: 'en',
+    };
+  }
+
+
+
+  onChangeLocale(text) {
+    this.setState({Userlocale: text});
+  }
   
     render() {
       return (
@@ -29,10 +43,11 @@ export default class Screen1 extends React.Component {
           <Text>Setting</Text>
           <Dropdown
             containerStyle={{width: 100, height: 80,}}
-           
+            onChangeText={(text) => this.setState({Userlocale:text})}
             label='Language'
             data={locale}
            />
+           <Text>{this.state.Userlocale}</Text>
         </View>
       )
     }
