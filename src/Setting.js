@@ -27,7 +27,7 @@ const locale=[
 
 
 
-export default class Screen1 extends React.Component {
+export default class Setting extends React.Component {
 
   
 

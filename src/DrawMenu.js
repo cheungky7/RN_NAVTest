@@ -9,7 +9,7 @@ export default class DrawMenu extends React.Component {
         return (
           <View >
             <Text
-              onPress={() => navigation.navigate('screen1')}
+              onPress={() => navigation.navigate('Setting')}
               >
               Screen 1
             </Text>

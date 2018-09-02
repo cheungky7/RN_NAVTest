@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import {View ,Text} from 'react-native';
 import {createStackNavigator,createDrawerNavigator} from 'react-navigation';
 import LoginScreen from './src/Login';
-import Screen1 from './src/Screen1';
+//import Screen1 from './src/Screen1';
+import Setting from './src/Setting'
 import Screen2 from './src/Screen2';
 import Screen3 from './src/Screen3';
 import DrawMenu from './src/DrawMenu'
 
 const DrawerStack = createDrawerNavigator({
-    screen1: { screen: Screen1 },
+    Setting: { screen: Setting },
     screen2: { screen: Screen2 },
     screen3: { screen: Screen3 },
   },
