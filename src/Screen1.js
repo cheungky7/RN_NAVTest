@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { Dropdown } from 'react-native-material-dropdown';
 //import { width } from 'window-size';
-
+import I18n from './I18N/i18n'
 
 /*const typographyData = [
   { value: 'Display2', label: 'Display 2' },
@@ -21,29 +21,37 @@ const locale=[
 
 ];
 
+//const onChangeLocale=
+
+
+
+
+
 export default class Screen1 extends React.Component {
+
+  
 
   constructor(props) {
     super(props);
 
     this.state = {
-      Userlocale: 'en',
+      Userlocale: I18n.locale,
     };
-  }
-
-
-
-  onChangeLocale(text) {
-    this.setState({Userlocale: text});
   }
   
     render() {
       return (
         <View style={{flex:1,alignItems: 'center',justifyContent:'center'}}>
-          <Text>Setting</Text>
+          <Text>{I18n.t('setting')}</Text>
           <Dropdown
             containerStyle={{width: 100, height: 80,}}
-            onChangeText={(text) => this.setState({Userlocale:text})}
+            onChangeText={
+              (text)=>{
+                I18n.locale=text;
+                this.setState({Userlocale: text});
+               
+               }
+            }
             label='Language'
             data={locale}
            />
