@@ -6,7 +6,9 @@ import LoginScreen from './src/Login';
 import Setting from './src/Setting'
 import Screen2 from './src/Screen2';
 import Screen3 from './src/Screen3';
-import DrawMenu from './src/DrawMenu'
+import DrawMenu from './src/DrawMenu';
+import store from './src/store';
+import { Provider } from 'react-redux';
 
 const DrawerStack = createDrawerNavigator({
     Setting: { screen: Setting },
@@ -67,6 +69,10 @@ const RootStack= createStackNavigator(
 
 export default class App extends React.Component{
     render(){
-        return <RootStack/>;
+    return (
+      <Provider store={store}>
+        <RootStack/>
+      </Provider>
+      );
     }
 }
