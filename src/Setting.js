@@ -7,7 +7,7 @@ import { changelocale } from './action/SettingAction'
 const mapStateToProps = (state) => {
     console.log(state);
     return {
-      userLocale: state.SettingReducer.userLocale
+      userLocale: state.Setting.userLocale
     }
   }
 
